@@ -1,0 +1,47 @@
+[gd_resource type="Resource" script_class="ThemeConfig" format=3 uid="uid://btavj1qdslgfv"]
+
+[ext_resource type="Script" uid="uid://bu8euvu28g2dj" path="res://Resources/Theme_config.gd" id="1_tm42u"]
+[ext_resource type="Texture2D" uid="uid://ck4a3bst3sxbp" path="res://Tilesets/tileset_grass.png" id="2_huni6"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gimpm"]
+texture = ExtResource("2_huni6")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+10:0/0 = 0
+11:0/0 = 0
+12:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+11:1/0 = 0
+12:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+11:2/0 = 0
+12:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_vgimq"]
+sources/0 = SubResource("TileSetAtlasSource_gimpm")
+
+[resource]
+script = ExtResource("1_tm42u")
+tileset = SubResource("TileSet_vgimq")
+metadata/_custom_type_script = "uid://bu8euvu28g2dj"

@@ -1,17 +1,76 @@
-[gd_scene format=3 uid="uid://l8knjmpubwws"]
+[gd_scene format=4 uid="uid://l8knjmpubwws"]
 
 [ext_resource type="Script" uid="uid://ckmfyotyfkojs" path="res://Scripts/main.gd" id="1_jjgbg"]
+[ext_resource type="Script" uid="uid://bu8euvu28g2dj" path="res://Resources/Theme_config.gd" id="2_21xkr"]
+[ext_resource type="Texture2D" uid="uid://ck4a3bst3sxbp" path="res://Tilesets/tileset_grass.png" id="2_bo1nx"]
+[ext_resource type="Resource" uid="uid://btavj1qdslgfv" path="res://Resources/TilesetThemes/grass_theme.tres" id="3_6bp64"]
+[ext_resource type="Resource" uid="uid://bl123l03rhdl5" path="res://Resources/TilesetThemes/grass_rock_theme.tres" id="4_344ge"]
+[ext_resource type="Resource" uid="uid://bcuc7dobq1q7f" path="res://Resources/TilesetThemes/snow_theme.tres" id="5_ynf5e"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8gbba"]
+texture = ExtResource("2_bo1nx")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+10:0/0 = 0
+11:0/0 = 0
+12:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+11:1/0 = 0
+12:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+11:2/0 = 0
+12:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_jjvhh"]
+sources/0 = SubResource("TileSetAtlasSource_8gbba")
 
 [node name="Main" type="Node2D" unique_id=395191987]
 script = ExtResource("1_jjgbg")
+themes = Array[ExtResource("2_21xkr")]([ExtResource("3_6bp64"), ExtResource("4_344ge"), ExtResource("5_ynf5e")])
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=643869941]
+tile_map_data = PackedByteArray("AAAMAAoAAAABAAIAAAANAAoAAAAEAAIAAAAOAAoAAAAHAAEAAAAPAAoAAAABAAIAAAAPAAwAAAABAAAAAAAPAA8AAAABAAIAAAAQAAoAAAAIAAEAAAAQAAwAAAACAAAAAAAQAA8AAAACAAIAAAARAAgAAAALAAAAAAARAAkAAAAAAAEAAAARAAoAAAAJAAEAAAARAA0AAAALAAAAAAARAA4AAAADAAEAAAARAA8AAAADAAIAAAASAAgAAAABAAAAAAASAAoAAAABAAIAAAASAA0AAAABAAAAAAASAA8AAAABAAIAAAATAAgAAAAKAAAAAAATAAoAAAAKAAEAAAATAA0AAAAMAAAAAAATAA8AAAAFAAIAAAAUAAgAAAAHAAAAAAAUAAkAAAADAAEAAAAUAAoAAAAHAAEAAAAUAA0AAAAAAAAAAAAUAA4AAAALAAEAAAAUAA8AAAAHAAIAAAAVAAoAAAABAAIAAAAVAA0AAAABAAAAAAAWAAoAAAAIAAEAAAAWAA0AAAALAAAAAAAXAAgAAAALAAAAAAAXAAkAAAALAAEAAAAXAAoAAAAHAAIAAAAXAA0AAAABAAAAAAAXAA8AAAABAAIAAAAYAAgAAAABAAAAAAAYAA0AAAAMAAAAAAAYAA8AAAAMAAIAAAAZAAgAAAAGAAAAAAAaAAgAAAABAAAAAAAbAAgAAAAMAAAAAAALAAcAAAAHAAAAAAALAAgAAAADAAEAAAALAAkAAAAAAAEAAAALAAoAAAADAAIAAAAOAAgAAAAHAAAAAAAOAAkAAAADAAEAAAAOAAwAAAAAAAAAAAAOAA0AAAAAAAEAAAAOAA4AAAAAAAEAAAAOAA8AAAAAAAIAAAAQAAgAAAAIAAAAAAAQAAkAAAAFAAEAAAAQAA0AAAACAAEAAAAQAA4AAAAFAAEAAAATAAcAAAAHAAAAAAATAAkAAAALAAEAAAATAA4AAAALAAEAAAAWAAgAAAAIAAAAAAAWAAkAAAAFAAEAAAAWAA4AAAALAAEAAAAWAA8AAAALAAIAAAAYAA4AAAAMAAEAAAAZAAkAAAAGAAEAAAAZAAoAAAAGAAIAAAAbAAkAAAAFAAEAAAAbAAoAAAAMAAEAAAA=")
+tile_set = SubResource("TileSet_jjvhh")
 
 [node name="ObjectsLayer" type="Node2D" parent="." unique_id=283971037]
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=908657254]
 
-[node name="GenerateBtn" type="Button" parent="UI" unique_id=715436163]
-offset_right = 8.0
-offset_bottom = 8.0
+[node name="Generate_btn" type="Button" parent="UI" unique_id=151026385]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -40.0
+offset_right = 40.0
+offset_bottom = 31.0
+grow_horizontal = 2
 text = "Generate"
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=870784421]
+z_index = -1
+offset_right = 638.0
+offset_bottom = 638.0
+color = Color(0.4509804, 0.74509805, 0.827451, 1)
+
+[connection signal="pressed" from="UI/Generate_btn" to="." method="_on_generate_btn_pressed"]
