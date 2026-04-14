@@ -1,7 +1,13 @@
 [gd_resource type="Resource" script_class="ThemeConfig" format=3 uid="uid://bl123l03rhdl5"]
 
+[ext_resource type="PackedScene" uid="uid://cfki0uc5mngn4" path="res://Scenes/Objects/Bush.tscn" id="1_hrksi"]
 [ext_resource type="Script" uid="uid://bu8euvu28g2dj" path="res://Resources/Theme_config.gd" id="1_ukvc5"]
+[ext_resource type="PackedScene" uid="uid://bdgcl7sl7tgda" path="res://Scenes/Objects/flowers01.tscn" id="2_8fyod"]
 [ext_resource type="Texture2D" uid="uid://5c7hbpiggwmk" path="res://Tilesets/tileset_grass_rock.png" id="3_ox0d5"]
+[ext_resource type="PackedScene" uid="uid://d2n0ojlqu3we4" path="res://Scenes/Objects/grass01.tscn" id="3_rl1rt"]
+[ext_resource type="PackedScene" uid="uid://17012k6iwdoe" path="res://Scenes/Objects/grass02.tscn" id="4_d1vu0"]
+[ext_resource type="PackedScene" uid="uid://dc0je80otdvqh" path="res://Scenes/Objects/SmallTree.tscn" id="5_1oaq6"]
+[ext_resource type="PackedScene" uid="uid://bt8smkpclmr5" path="res://Scenes/Objects/tree.tscn" id="6_2j03m"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ukvc5"]
 texture = ExtResource("3_ox0d5")
@@ -44,4 +50,5 @@ sources/0 = SubResource("TileSetAtlasSource_ukvc5")
 [resource]
 script = ExtResource("1_ukvc5")
 tileset = SubResource("TileSet_ox0d5")
+decor = Array[PackedScene]([ExtResource("1_hrksi"), ExtResource("2_8fyod"), ExtResource("3_rl1rt"), ExtResource("4_d1vu0"), ExtResource("5_1oaq6"), ExtResource("6_2j03m")])
 metadata/_custom_type_script = "uid://bu8euvu28g2dj"

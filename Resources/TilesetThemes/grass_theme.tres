@@ -1,7 +1,10 @@
 [gd_resource type="Resource" script_class="ThemeConfig" format=3 uid="uid://btavj1qdslgfv"]
 
+[ext_resource type="PackedScene" uid="uid://bhql7r1x0qipr" path="res://Scenes/Objects/flowers02.tscn" id="1_jss1h"]
 [ext_resource type="Script" uid="uid://bu8euvu28g2dj" path="res://Resources/Theme_config.gd" id="1_tm42u"]
+[ext_resource type="PackedScene" uid="uid://dlqx70mp6shqm" path="res://Scenes/Objects/flowers03.tscn" id="2_00uik"]
 [ext_resource type="Texture2D" uid="uid://ck4a3bst3sxbp" path="res://Tilesets/tileset_grass.png" id="2_huni6"]
+[ext_resource type="PackedScene" uid="uid://17012k6iwdoe" path="res://Scenes/Objects/grass02.tscn" id="3_plo7q"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gimpm"]
 texture = ExtResource("2_huni6")
@@ -44,4 +47,5 @@ sources/0 = SubResource("TileSetAtlasSource_gimpm")
 [resource]
 script = ExtResource("1_tm42u")
 tileset = SubResource("TileSet_vgimq")
+decor = Array[PackedScene]([ExtResource("1_jss1h"), ExtResource("2_00uik"), ExtResource("3_plo7q")])
 metadata/_custom_type_script = "uid://bu8euvu28g2dj"

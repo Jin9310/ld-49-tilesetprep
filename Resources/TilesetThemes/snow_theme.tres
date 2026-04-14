@@ -1,7 +1,10 @@
 [gd_resource type="Resource" script_class="ThemeConfig" format=3 uid="uid://bcuc7dobq1q7f"]
 
 [ext_resource type="Script" uid="uid://bu8euvu28g2dj" path="res://Resources/Theme_config.gd" id="1_0u7nt"]
+[ext_resource type="PackedScene" uid="uid://bfrdckx3xcnuf" path="res://Scenes/Objects/snow01.tscn" id="1_ljx3y"]
+[ext_resource type="PackedScene" uid="uid://dga2tmp4uv" path="res://Scenes/Objects/snow02.tscn" id="2_hqmgc"]
 [ext_resource type="Texture2D" uid="uid://dlc4mkpwkddd" path="res://Tilesets/tileset_snow.png" id="2_j2b61"]
+[ext_resource type="PackedScene" uid="uid://ccubsfa6bc2gt" path="res://Scenes/Objects/snowman.tscn" id="3_7anca"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j2b61"]
 texture = ExtResource("2_j2b61")
@@ -44,4 +47,5 @@ sources/0 = SubResource("TileSetAtlasSource_j2b61")
 [resource]
 script = ExtResource("1_0u7nt")
 tileset = SubResource("TileSet_0u7nt")
+decor = Array[PackedScene]([ExtResource("1_ljx3y"), ExtResource("2_hqmgc"), ExtResource("3_7anca")])
 metadata/_custom_type_script = "uid://bu8euvu28g2dj"

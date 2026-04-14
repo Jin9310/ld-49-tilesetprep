@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dc0je80otdvqh"]
+
+[ext_resource type="Texture2D" uid="uid://dxo2ifcmkyw83" path="res://Resources/Objs/GrassRock/obj6.png" id="1_ye4d8"]
+
+[node name="SmallTree" type="Node2D" unique_id=141483622]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=876705376]
+texture = ExtResource("1_ye4d8")
