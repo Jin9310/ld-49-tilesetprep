@@ -5,6 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://dga2tmp4uv" path="res://Scenes/Objects/snow02.tscn" id="2_hqmgc"]
 [ext_resource type="Texture2D" uid="uid://dlc4mkpwkddd" path="res://Tilesets/tileset_snow.png" id="2_j2b61"]
 [ext_resource type="PackedScene" uid="uid://ccubsfa6bc2gt" path="res://Scenes/Objects/snowman.tscn" id="3_7anca"]
+[ext_resource type="PackedScene" uid="uid://du0hxs0jutl8d" path="res://Scenes/Objects/snow_chest.tscn" id="4_7anca"]
+[ext_resource type="PackedScene" uid="uid://djnod3my1dsoi" path="res://Scenes/Objects/snow_tree.tscn" id="5_5loqq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j2b61"]
 texture = ExtResource("2_j2b61")
@@ -47,5 +49,5 @@ sources/0 = SubResource("TileSetAtlasSource_j2b61")
 [resource]
 script = ExtResource("1_0u7nt")
 tileset = SubResource("TileSet_0u7nt")
-decor = Array[PackedScene]([ExtResource("1_ljx3y"), ExtResource("2_hqmgc"), ExtResource("3_7anca")])
+decor = Array[PackedScene]([ExtResource("1_ljx3y"), ExtResource("2_hqmgc"), ExtResource("3_7anca"), ExtResource("4_7anca"), ExtResource("5_5loqq")])
 metadata/_custom_type_script = "uid://bu8euvu28g2dj"

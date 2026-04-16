@@ -5,6 +5,11 @@
 [ext_resource type="PackedScene" uid="uid://dlqx70mp6shqm" path="res://Scenes/Objects/flowers03.tscn" id="2_00uik"]
 [ext_resource type="Texture2D" uid="uid://ck4a3bst3sxbp" path="res://Tilesets/tileset_grass.png" id="2_huni6"]
 [ext_resource type="PackedScene" uid="uid://17012k6iwdoe" path="res://Scenes/Objects/grass02.tscn" id="3_plo7q"]
+[ext_resource type="PackedScene" uid="uid://blmobnn5niwe" path="res://Scenes/Objects/chest.tscn" id="4_wijb1"]
+[ext_resource type="PackedScene" uid="uid://d2n0ojlqu3we4" path="res://Scenes/Objects/grass01.tscn" id="5_e34e3"]
+[ext_resource type="PackedScene" uid="uid://cl4mledc51nd0" path="res://Scenes/Objects/grass1.tscn" id="6_rsfr6"]
+[ext_resource type="PackedScene" uid="uid://bfij42la773ku" path="res://Scenes/Objects/grass2.tscn" id="7_kdn1c"]
+[ext_resource type="PackedScene" uid="uid://b5lemquvoaoux" path="res://Scenes/Objects/grass3.tscn" id="8_tv5ks"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gimpm"]
 texture = ExtResource("2_huni6")
@@ -47,5 +52,5 @@ sources/0 = SubResource("TileSetAtlasSource_gimpm")
 [resource]
 script = ExtResource("1_tm42u")
 tileset = SubResource("TileSet_vgimq")
-decor = Array[PackedScene]([ExtResource("1_jss1h"), ExtResource("2_00uik"), ExtResource("3_plo7q")])
+decor = Array[PackedScene]([ExtResource("1_jss1h"), ExtResource("2_00uik"), ExtResource("3_plo7q"), ExtResource("4_wijb1"), ExtResource("5_e34e3"), ExtResource("6_rsfr6"), ExtResource("3_plo7q"), ExtResource("7_kdn1c"), ExtResource("8_tv5ks")])
 metadata/_custom_type_script = "uid://bu8euvu28g2dj"

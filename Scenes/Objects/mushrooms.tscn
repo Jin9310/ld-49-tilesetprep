@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://bh2mrr070ni7c"]
+
+[ext_resource type="Texture2D" uid="uid://b432swayhhjrf" path="res://Resources/Objs/GrassRock/obj17.png" id="1_qk55k"]
+
+[node name="Mushrooms" type="Node2D" unique_id=1037885571]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1336923796]
+texture = ExtResource("1_qk55k")

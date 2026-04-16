@@ -6,6 +6,7 @@
 [ext_resource type="Resource" uid="uid://btavj1qdslgfv" path="res://Resources/TilesetThemes/grass_theme.tres" id="3_6bp64"]
 [ext_resource type="Resource" uid="uid://bl123l03rhdl5" path="res://Resources/TilesetThemes/grass_rock_theme.tres" id="4_344ge"]
 [ext_resource type="Resource" uid="uid://bcuc7dobq1q7f" path="res://Resources/TilesetThemes/snow_theme.tres" id="5_ynf5e"]
+[ext_resource type="Resource" uid="uid://b1pfmvh0lpjmi" path="res://Resources/TilesetThemes/generic_01_theme.tres" id="6_6bp64"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8gbba"]
 texture = ExtResource("2_bo1nx")
@@ -47,7 +48,7 @@ sources/0 = SubResource("TileSetAtlasSource_8gbba")
 
 [node name="Main" type="Node2D" unique_id=395191987]
 script = ExtResource("1_jjgbg")
-themes = Array[ExtResource("2_21xkr")]([ExtResource("3_6bp64"), ExtResource("4_344ge"), ExtResource("5_ynf5e")])
+themes = Array[ExtResource("2_21xkr")]([ExtResource("3_6bp64"), ExtResource("4_344ge"), ExtResource("5_ynf5e"), ExtResource("6_6bp64")])
 blacklist = Array[Vector2i]([Vector2i(17, 7), Vector2i(23, 7), Vector2i(27, 7), Vector2i(16, 11), Vector2i(17, 12), Vector2i(19, 12), Vector2i(22, 12), Vector2i(24, 12)])
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=643869941]

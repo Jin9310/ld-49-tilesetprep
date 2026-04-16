@@ -1,0 +1,60 @@
+[gd_resource type="Resource" script_class="ThemeConfig" format=3 uid="uid://b1pfmvh0lpjmi"]
+
+[ext_resource type="PackedScene" uid="uid://dfv3g7xdl778o" path="res://Scenes/Objects/branch.tscn" id="1_7mh0k"]
+[ext_resource type="Script" uid="uid://bu8euvu28g2dj" path="res://Resources/Theme_config.gd" id="1_hfkd6"]
+[ext_resource type="Texture2D" uid="uid://jnsiixaaitgo" path="res://Tilesets/tileset01.png" id="2_48ycl"]
+[ext_resource type="PackedScene" uid="uid://cfki0uc5mngn4" path="res://Scenes/Objects/Bush.tscn" id="2_srp2i"]
+[ext_resource type="PackedScene" uid="uid://blmobnn5niwe" path="res://Scenes/Objects/chest.tscn" id="3_piwbs"]
+[ext_resource type="PackedScene" uid="uid://d2n0ojlqu3we4" path="res://Scenes/Objects/grass01.tscn" id="4_dh03p"]
+[ext_resource type="PackedScene" uid="uid://cl4mledc51nd0" path="res://Scenes/Objects/grass1.tscn" id="5_2pqu0"]
+[ext_resource type="PackedScene" uid="uid://17012k6iwdoe" path="res://Scenes/Objects/grass02.tscn" id="6_2ubw8"]
+[ext_resource type="PackedScene" uid="uid://bfij42la773ku" path="res://Scenes/Objects/grass2.tscn" id="7_tjmx7"]
+[ext_resource type="PackedScene" uid="uid://b5lemquvoaoux" path="res://Scenes/Objects/grass3.tscn" id="8_xwb0i"]
+[ext_resource type="PackedScene" uid="uid://bh2mrr070ni7c" path="res://Scenes/Objects/mushrooms.tscn" id="9_am7d2"]
+[ext_resource type="PackedScene" uid="uid://bisma8ymq4e03" path="res://Scenes/Objects/smallTree2.tscn" id="10_rbpto"]
+[ext_resource type="PackedScene" uid="uid://dc0je80otdvqh" path="res://Scenes/Objects/SmallTree.tscn" id="11_ndhp2"]
+[ext_resource type="PackedScene" uid="uid://bt8smkpclmr5" path="res://Scenes/Objects/tree.tscn" id="12_dav00"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qlh25"]
+texture = ExtResource("2_48ycl")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+10:0/0 = 0
+11:0/0 = 0
+12:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+11:1/0 = 0
+12:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+11:2/0 = 0
+12:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_2q1un"]
+sources/0 = SubResource("TileSetAtlasSource_qlh25")
+
+[resource]
+script = ExtResource("1_hfkd6")
+tileset = SubResource("TileSet_2q1un")
+decor = Array[PackedScene]([ExtResource("1_7mh0k"), ExtResource("2_srp2i"), ExtResource("3_piwbs"), ExtResource("4_dh03p"), ExtResource("5_2pqu0"), ExtResource("6_2ubw8"), ExtResource("7_tjmx7"), ExtResource("8_xwb0i"), ExtResource("9_am7d2"), ExtResource("10_rbpto"), ExtResource("11_ndhp2"), ExtResource("12_dav00")])
+metadata/_custom_type_script = "uid://bu8euvu28g2dj"

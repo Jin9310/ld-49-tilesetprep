@@ -8,6 +8,10 @@
 [ext_resource type="PackedScene" uid="uid://17012k6iwdoe" path="res://Scenes/Objects/grass02.tscn" id="4_d1vu0"]
 [ext_resource type="PackedScene" uid="uid://dc0je80otdvqh" path="res://Scenes/Objects/SmallTree.tscn" id="5_1oaq6"]
 [ext_resource type="PackedScene" uid="uid://bt8smkpclmr5" path="res://Scenes/Objects/tree.tscn" id="6_2j03m"]
+[ext_resource type="PackedScene" uid="uid://dfv3g7xdl778o" path="res://Scenes/Objects/branch.tscn" id="7_1oaq6"]
+[ext_resource type="PackedScene" uid="uid://cl4mledc51nd0" path="res://Scenes/Objects/grass1.tscn" id="8_2j03m"]
+[ext_resource type="PackedScene" uid="uid://bh2mrr070ni7c" path="res://Scenes/Objects/mushrooms.tscn" id="9_rnhpr"]
+[ext_resource type="PackedScene" uid="uid://bisma8ymq4e03" path="res://Scenes/Objects/smallTree2.tscn" id="10_c33tv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ukvc5"]
 texture = ExtResource("3_ox0d5")
@@ -50,5 +54,5 @@ sources/0 = SubResource("TileSetAtlasSource_ukvc5")
 [resource]
 script = ExtResource("1_ukvc5")
 tileset = SubResource("TileSet_ox0d5")
-decor = Array[PackedScene]([ExtResource("1_hrksi"), ExtResource("2_8fyod"), ExtResource("3_rl1rt"), ExtResource("4_d1vu0"), ExtResource("5_1oaq6"), ExtResource("6_2j03m")])
+decor = Array[PackedScene]([ExtResource("1_hrksi"), ExtResource("2_8fyod"), ExtResource("3_rl1rt"), ExtResource("4_d1vu0"), ExtResource("5_1oaq6"), ExtResource("6_2j03m"), ExtResource("7_1oaq6"), ExtResource("3_rl1rt"), ExtResource("8_2j03m"), ExtResource("4_d1vu0"), ExtResource("9_rnhpr"), ExtResource("10_c33tv"), ExtResource("5_1oaq6")])
 metadata/_custom_type_script = "uid://bu8euvu28g2dj"
