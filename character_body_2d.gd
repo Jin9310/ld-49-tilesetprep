@@ -1,3 +1,4 @@
+class_name Player
 extends CharacterBody2D
 
 # -- Tuning of the movement --
@@ -16,11 +17,21 @@ var is_grounded: bool = false
 var current_host: CharacterBody2D = null
 
 @onready var aim_line: Line2D = $aim_line
+@onready var sprite_2d: Sprite2D = $Sprite2D
+
+# -- Signals --
+
 
 func _ready() -> void:
 	_update_aim_line()
 
 func _physics_process(delta: float) -> void:
+	
+	if Gamemanager.on_host:
+		sprite_2d.visible = false
+	else:
+		sprite_2d.visible = true
+	
 	if not is_on_floor():
 		velocity.y += GRAVITY * delta
 	else:
@@ -47,7 +58,8 @@ func _launch() -> void:
 	velocity = direction * JUMP_FORCE
 
 # ---------- Helpers ----------
-
+func hide_sprite() -> void:
+	$Sprite2D.visible = false
 #WIP
 func on_enemy_entered(enemy: CharacterBody2D):
 	attach_to_host(enemy)

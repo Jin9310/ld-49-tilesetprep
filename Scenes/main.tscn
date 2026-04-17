@@ -10,7 +10,6 @@
 [ext_resource type="PackedScene" uid="uid://cyoxtm4ehbu3v" path="res://character_body_2d.tscn" id="8_344ge"]
 [ext_resource type="Texture2D" uid="uid://re1gohqgbrq" path="res://icon.svg" id="9_ynf5e"]
 [ext_resource type="PackedScene" uid="uid://j66k0it4muw4" path="res://enemy.tscn" id="10_hptm8"]
-[ext_resource type="PackedScene" uid="uid://7vrqf3dwjbss" path="res://test.tscn" id="11_d1ilt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8gbba"]
 texture = ExtResource("2_bo1nx")
@@ -100,34 +99,12 @@ scale = Vector2(0.9999997, 0.9999997)
 shape = SubResource("RectangleShape2D_ynf5e")
 one_way_collision = true
 
-[node name="StaticBody2D5" type="StaticBody2D" parent="." unique_id=812353740]
-position = Vector2(293, -10.999996)
-scale = Vector2(0.44872427, 0.44872427)
-
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D5" unique_id=451425093]
-self_modulate = Color(0, 0, 0, 0.5176471)
-position = Vector2(59.056206, 318.5407)
-scale = Vector2(11.2297535, 0.2415514)
-texture = ExtResource("9_ynf5e")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5" unique_id=15916820]
-position = Vector2(63.513245, 314.2241)
-scale = Vector2(0.9999997, 0.9999997)
-shape = SubResource("RectangleShape2D_ynf5e")
-one_way_collision = true
-
 [node name="Enemy" parent="." unique_id=1253442301 instance=ExtResource("10_hptm8")]
 position = Vector2(196, 264)
 speed = 75.0
 
 [node name="Enemy2" parent="." unique_id=1683775297 instance=ExtResource("10_hptm8")]
-position = Vector2(413, 52)
+position = Vector2(403, 173)
 speed = 75.0
-
-[node name="test" parent="." unique_id=1707809761 instance=ExtResource("11_d1ilt")]
-position = Vector2(197, 315)
-
-[node name="test2" parent="." unique_id=1330891931 instance=ExtResource("11_d1ilt")]
-position = Vector2(415, 100)
 
 [connection signal="pressed" from="UI/Generate_btn" to="." method="_on_generate_btn_pressed"]
