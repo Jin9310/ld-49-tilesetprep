@@ -1,22 +1,21 @@
 extends CharacterBody2D
 
-# -- Tuning --
-const GRAVITY        = 900.0
-#const MIN_JUMP_FORCE = 200.0
-#const MAX_JUMP_FORCE = 800.0
-const JUMP_FORCE = 500.0
-const CHARGE_SPEED   = 400.0
+# -- Tuning of the movement --
+const GRAVITY = 900.0
+const JUMP_FORCE = 600.0
+const CHARGE_SPEED = 400.0
+const TRAJECTORY_STEPS = 30     # how many dots to preview
+const TRAJECTORY_STEP_DT = .05 # simulated seconds per step
 
 # -- State --
-var charge      : float = 0.0
-var is_charging : bool  = false
-var is_grounded : bool  = false
+var charge: float = 0.0
+var is_charging: bool = false
+var is_grounded: bool = false
+
+# -- Parasites host --
+var current_host: CharacterBody2D = null
 
 @onready var aim_line: Line2D = $aim_line
-
-# -- Add this constant at the top with the others --
-const TRAJECTORY_STEPS = 30     # how many dots to preview
-const TRAJECTORY_STEP_DT = 0.05 # simulated seconds per step
 
 func _ready() -> void:
 	_update_aim_line()
@@ -28,29 +27,43 @@ func _physics_process(delta: float) -> void:
 		is_grounded = true
 		velocity.x  = 0.0
 
+# -- move only when grounded
 	if is_grounded:
 		_handle_input()
 
 	move_and_slide()
+# -- Draw line
 	_update_aim_line()
 
 # ---------- Input ----------
 
 func _handle_input() -> void:
-	if Input.is_action_just_pressed("ui_accept"):
+	if Input.is_action_just_pressed("lmb"):
 		_launch()
 
 func _launch() -> void:
 	is_grounded = false
 	var direction = _get_aim_direction()
-	velocity      = direction * JUMP_FORCE
+	velocity = direction * JUMP_FORCE
 
 # ---------- Helpers ----------
 
+#WIP
+func on_enemy_entered(enemy: CharacterBody2D):
+	attach_to_host(enemy)
+	
+#WIP
+func attach_to_host(enemy: CharacterBody2D) -> void:
+	current_host = enemy
+	enemy.add_child(self)
+
+
 func _get_aim_direction() -> Vector2:
+	# get where mouse is moving
 	var mouse_world = get_global_mouse_position()
+	# make it direction
 	var dir = (mouse_world - global_position).normalized()
-	# Clamp to upper hemisphere only — parasite can't jump downward
+	# Clamp to upper hemisphere only — parasite cant jump downwards
 	if dir.y > 0:
 		dir.y = 0
 		dir = dir.normalized() if dir.length() > 0 else Vector2.UP
@@ -64,9 +77,9 @@ func _update_aim_line() -> void:
 		return
 
 	aim_line.visible = true
-	var direction    = _get_aim_direction()
-	var line_len     = 80.0   # fixed length now
-	aim_line.points  = _simulate_trajectory(direction * JUMP_FORCE)
+	var direction = _get_aim_direction()
+	var line_len = 80.0   # fixed length now
+	aim_line.points = _simulate_trajectory(direction * JUMP_FORCE)
 
 func _simulate_trajectory(launch_velocity: Vector2) -> PackedVector2Array:
 	var points = PackedVector2Array()
@@ -76,6 +89,6 @@ func _simulate_trajectory(launch_velocity: Vector2) -> PackedVector2Array:
 	for i in TRAJECTORY_STEPS:
 		points.append(pos)
 		vel.y += GRAVITY * TRAJECTORY_STEP_DT   # same gravity as _physics_process
-		pos   += vel * TRAJECTORY_STEP_DT        # move forward one simulated step
+		pos += vel * TRAJECTORY_STEP_DT         # move forward one simulated step
 
 	return points

@@ -5,7 +5,7 @@
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_44cfe"]
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1414936127]
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1414936127 groups=["parasite"]]
 script = ExtResource("1_ij6vw")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1392602355]
@@ -17,6 +17,6 @@ position = Vector2(0, 3)
 shape = SubResource("CircleShape2D_44cfe")
 
 [node name="aim_line" type="Line2D" parent="." unique_id=1197194289]
-width = 2.0
-default_color = Color(1, 1, 1, 0.54901963)
+width = 3.0
+default_color = Color(1, 1, 1, 0.5764706)
 texture_mode = 1

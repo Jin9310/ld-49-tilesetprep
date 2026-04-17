@@ -9,6 +9,8 @@
 [ext_resource type="Resource" uid="uid://b1pfmvh0lpjmi" path="res://Resources/TilesetThemes/generic_01_theme.tres" id="6_6bp64"]
 [ext_resource type="PackedScene" uid="uid://cyoxtm4ehbu3v" path="res://character_body_2d.tscn" id="8_344ge"]
 [ext_resource type="Texture2D" uid="uid://re1gohqgbrq" path="res://icon.svg" id="9_ynf5e"]
+[ext_resource type="PackedScene" uid="uid://j66k0it4muw4" path="res://enemy.tscn" id="10_hptm8"]
+[ext_resource type="PackedScene" uid="uid://7vrqf3dwjbss" path="res://test.tscn" id="11_d1ilt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8gbba"]
 texture = ExtResource("2_bo1nx")
@@ -49,12 +51,7 @@ texture = ExtResource("2_bo1nx")
 sources/0 = SubResource("TileSetAtlasSource_8gbba")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ynf5e"]
-size = Vector2(695.3047, 20)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_hptm8"]
-size = Vector2(820.10284, 20)
-
-[sub_resource type="SeparationRayShape2D" id="SeparationRayShape2D_ynf5e"]
+size = Vector2(1441.8657, 20)
 
 [node name="Main" type="Node2D" unique_id=395191987]
 script = ExtResource("1_jjgbg")
@@ -89,48 +86,48 @@ color = Color(0.4509804, 0.74509805, 0.827451, 1)
 position = Vector2(402, 312)
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="." unique_id=1847724891]
-position = Vector2(310.00003, 196.99998)
+position = Vector2(294.00003, 206.00002)
 scale = Vector2(0.44872427, 0.44872427)
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D4" unique_id=1952140822]
-position = Vector2(116, 318.5407)
-scale = Vector2(6.474881, 0.2415514)
+position = Vector2(59.056206, 318.5407)
+scale = Vector2(11.2297535, 0.2415514)
 texture = ExtResource("9_ynf5e")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4" unique_id=1490262969]
-position = Vector2(158.2262, 314.22418)
-scale = Vector2(0.9999998, 0.9999998)
+position = Vector2(63.513245, 314.2241)
+scale = Vector2(0.9999997, 0.9999997)
 shape = SubResource("RectangleShape2D_ynf5e")
 one_way_collision = true
 
-[node name="StaticBody2D5" type="StaticBody2D" parent="." unique_id=183531273]
-position = Vector2(155.00005, 121.00002)
+[node name="StaticBody2D5" type="StaticBody2D" parent="." unique_id=812353740]
+position = Vector2(293, -10.999996)
 scale = Vector2(0.44872427, 0.44872427)
 
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D5" unique_id=2027408134]
-position = Vector2(116, 318.5407)
-scale = Vector2(6.474881, 0.2415514)
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D5" unique_id=451425093]
+self_modulate = Color(0, 0, 0, 0.5176471)
+position = Vector2(59.056206, 318.5407)
+scale = Vector2(11.2297535, 0.2415514)
 texture = ExtResource("9_ynf5e")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5" unique_id=1120004009]
-position = Vector2(111.42689, 316.4526)
-scale = Vector2(0.9999998, 0.9999998)
-shape = SubResource("RectangleShape2D_hptm8")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5" unique_id=15916820]
+position = Vector2(63.513245, 314.2241)
+scale = Vector2(0.9999997, 0.9999997)
+shape = SubResource("RectangleShape2D_ynf5e")
 one_way_collision = true
 
-[node name="StaticBody2D6" type="StaticBody2D" parent="." unique_id=1342488192]
-position = Vector2(394, 41.000008)
-scale = Vector2(0.44872427, 0.44872427)
+[node name="Enemy" parent="." unique_id=1253442301 instance=ExtResource("10_hptm8")]
+position = Vector2(196, 264)
+speed = 75.0
 
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D6" unique_id=1606189952]
-position = Vector2(116, 318.5407)
-scale = Vector2(6.474881, 0.2415514)
-texture = ExtResource("9_ynf5e")
+[node name="Enemy2" parent="." unique_id=1683775297 instance=ExtResource("10_hptm8")]
+position = Vector2(413, 52)
+speed = 75.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D6" unique_id=1916067093]
-position = Vector2(113.65558, 287.4816)
-scale = Vector2(0.9999999, 0.9999999)
-shape = SubResource("SeparationRayShape2D_ynf5e")
-one_way_collision = true
+[node name="test" parent="." unique_id=1707809761 instance=ExtResource("11_d1ilt")]
+position = Vector2(197, 315)
+
+[node name="test2" parent="." unique_id=1330891931 instance=ExtResource("11_d1ilt")]
+position = Vector2(415, 100)
 
 [connection signal="pressed" from="UI/Generate_btn" to="." method="_on_generate_btn_pressed"]
