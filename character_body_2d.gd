@@ -27,11 +27,6 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	
-	if Gamemanager.on_host:
-		sprite_2d.visible = false
-	else:
-		sprite_2d.visible = true
-	
 	if not is_on_floor():
 		velocity.y += GRAVITY * delta
 	else:
